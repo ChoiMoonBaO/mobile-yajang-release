@@ -2,9 +2,9 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<meta name="myj-ver" content="0.94.15">
+<meta name="myj-ver" content="0.94.16">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>모바일야장 PC도우미 v0.94.15</title>
+<title>모바일야장 PC도우미 v0.94.16</title>
 <!-- 예전 이름: 지적기준점망도 및 야장 도우미 (v0.94.7 이하 PC의 [⟳ 업데이트]가 이 글자로 새 판을 알아봄 — 지우지 말 것) -->
 <style>
 :root{
@@ -644,12 +644,12 @@ td.nm .pn{line-height:18px}td.nm .nmsub{line-height:13px} /* 한글 점명도 �
 .stmpanel.fold .stbtns{display:none}
 /* 앱 야장: 한 화면에 하나만 — 점 목록, 또는 누른 점의 야장(전체 화면) */
 .stm.list .stmpanel{display:none}
-.stm.one .stspday,.stm.one #stmTbl,.stm.one .stmselbar{display:none}
-.stm.one .stmpanel{max-height:none;flex:1 1 auto;margin-top:0;min-height:0}
+.stm.one .stmbody{position:relative}
+.stm.one .stmpanel{position:absolute;left:0;right:0;top:0;bottom:0;z-index:5;max-height:none;margin:0;min-height:0;box-shadow:0 -4px 16px rgba(0,0,0,.18)} /* 점 목록 위에 덮어 씀: 올라오고 내려갈 때 뒤에 목록이 보임 */
 .stm.one .stmpanel.slidein{animation:stmUp .28s cubic-bezier(.2,.8,.3,1)}
-@keyframes stmUp{from{transform:translateY(100%);opacity:.6}to{transform:none;opacity:1}}
+@keyframes stmUp{from{transform:translateY(100%)}to{transform:none}}
 .stm.one .stmpanel.slideout{animation:stmDown .24s cubic-bezier(.4,0,.8,.4) forwards;pointer-events:none}
-@keyframes stmDown{from{transform:none;opacity:1}to{transform:translateY(100%);opacity:.6}}
+@keyframes stmDown{from{transform:none}to{transform:translateY(100%)}}
 @media (prefers-reduced-motion:reduce){.stm.one .stmpanel.slidein,.stm.one .stmpanel.slideout{animation:none}}
 .stm.one .stmpanel.fold .stedit,.stm.one .stmpanel.fold .stbtns{display:revert}
 .stmph .stmtolist{display:inline-flex;align-items:center;gap:4px;padding:3px 12px 3px 8px;border:1px solid #c5d3ea;border-radius:8px;background:#eef3fb;color:#1f4f9c;font-family:inherit;font-weight:700;font-size:14px;line-height:1.2;cursor:pointer}
@@ -710,7 +710,7 @@ td.nm .pn{line-height:18px}td.nm .nmsub{line-height:13px} /* 한글 점명도 �
 <body>
 <div class="app">
   <header>
-    <h1>모바일야장 PC도우미 <span style="font-weight:400;color:var(--sub);font-size:13px">v0.94.15</span></h1>
+    <h1>모바일야장 PC도우미 <span style="font-weight:400;color:var(--sub);font-size:13px">v0.94.16</span></h1>
     <div class="hmenu"><button class="primary" data-menu="mProj">📁 프로젝트 ▾</button>
       <div class="mlist" id="mProj" hidden>
         <button id="btnPlList" title="프로젝트 폴더에 저장된 프로젝트 목록">📂 내 프로젝트</button>
