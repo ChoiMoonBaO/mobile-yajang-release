@@ -2,11 +2,11 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<meta name="myj-ver" content="0.124.0">
+<meta name="myj-ver" content="0.124.1">
 <meta name="author" content="최문보 (C10200)">
 <!-- 모바일 야장 · 모바일야장 PC도우미 — 제작: 최문보 (한국국토정보공사, 사번 C10200), 2026. 이 줄은 제작자 표시입니다(화면·출력물에는 보이지 않음). -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>모바일야장 PC도우미 v0.124.0</title>
+<title>모바일야장 PC도우미 v0.124.1</title>
 <!-- 예전 이름: 지적기준점망도 및 야장 도우미 (v0.94.7 이하 PC의 [⟳ 업데이트]가 이 글자로 새 판을 알아봄 — 지우지 말 것) -->
 <style>
 :root{
@@ -708,6 +708,7 @@ table.yjbur.ed td input,table.yjbur.ed td select{font:inherit;font-size:12.5px;p
 :is(#dgModal) .dgck{border:1px solid #f0c27a;background:#fffaf2;border-radius:6px;padding:5px 10px;margin:12px 0 0;font-size:12.5px}:is(#dgModal) .dgck:not([open]){width:fit-content;max-width:100%;box-sizing:border-box}:is(#dgModal) .dgck .h{font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#8a4b00;cursor:pointer;list-style:none;user-select:none}:is(#dgModal) .dgck .h::-webkit-details-marker{display:none}:is(#dgModal) .dgck .h:before{content:'▸ ';color:#b07a2a}:is(#dgModal) .dgck[open] .h:before{content:'▾ '}:is(#dgModal) .dgck .h .b{color:#a11;font-weight:600}:is(#dgModal) .dgck[open] .h .b{display:none}:is(#dgModal) .dgck .l{max-height:58px;overflow:auto;line-height:1.55;color:#8a4b00;margin:3px 0 0 16px}:is(#dgModal) .dgck .l .bad{color:#a11;font-weight:600}
 .sgsame{display:flex;align-items:center;gap:6px;margin:10px 0 2px;font-size:13px;font-weight:600;color:#1f5fbf;cursor:pointer}.sgsame input{width:16px;height:16px;margin:0}#sgModal .sgoff{opacity:.55;pointer-events:none}
 .stcombo{display:block;width:100%;text-align:left;border:0;border-bottom:1.5px solid #8a94a0;background:transparent;font-size:14px;padding:3px 22px 3px 2px;min-height:28px;font-family:inherit;color:inherit;position:relative}.stcombo::after{content:"";position:absolute;right:6px;top:50%;width:7px;height:7px;border:solid #444;border-width:0 1.5px 1.5px 0;transform:translateY(-70%) rotate(45deg)}.stcombo:hover,.stcombo:active,.stcombo:focus{background:transparent;outline:0}.stcombo{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.stf.stmiss .stcombo{border-bottom-color:#E03131;background:#FFF0F0}
+body.mobile .right .tab[data-tab=static]{display:none} /* 앱 매설 망도 편집: 정지측량 탭 없음 (정지측량은 앱 정지측량 야장에서, v0.124.1 사용자) */
 .stcl{position:absolute;left:0;min-width:max(100%,150px);width:max-content;max-width:240px;top:100%;z-index:30;background:#fff;border:1px solid #c5ccd6;border-radius:8px;box-shadow:0 4px 14px rgba(0,0,0,.18);max-height:220px;overflow-y:auto;margin-top:2px;overscroll-behavior:contain}.stcl div{height:44px;line-height:44px;padding:0 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;border-bottom:1px solid #eef1f4;font-size:15px;cursor:pointer}.stcl div.on{background:#E8F0FE;font-weight:700}.stcl div.hand{color:#1f5fbf;display:flex;align-items:center;gap:6px}.stcl div.hand input{flex:1;min-width:0;border:0;border-bottom:1.5px solid #1f5fbf;font-size:15px;padding:2px;background:transparent;font-family:inherit}.stcl div.hand b{color:#fff;background:#1f5fbf;border-radius:6px;padding:0 10px;line-height:32px;font-size:14px}
 .stdate{display:block;width:100%;text-align:left;border:0;border-bottom:1.5px solid #8a94a0;background:transparent;font-size:14px;padding:3px 2px;min-height:28px;font-family:inherit;color:#1f5fbf;font-weight:600}
 .stmini{border:1px solid #c5ccd6;background:#fff;border-radius:6px;padding:4px 8px;font-size:12px;white-space:nowrap}
@@ -942,7 +943,7 @@ td.nm .pn{line-height:18px}td.nm .nmsub{line-height:13px} /* 한글 점명도 �
 <body>
 <div class="app">
   <header>
-    <h1>모바일야장 PC도우미 <span style="font-weight:400;color:var(--sub);font-size:13px">v0.124.0</span></h1>
+    <h1>모바일야장 PC도우미 <span style="font-weight:400;color:var(--sub);font-size:13px">v0.124.1</span></h1>
     <div class="hmenu"><button class="primary" data-menu="mProj">📁 프로젝트 ▾</button>
       <div class="mlist" id="mProj" hidden>
         <button id="btnPlList" title="프로젝트 폴더에 저장된 프로젝트 목록">📂 내 프로젝트</button>
