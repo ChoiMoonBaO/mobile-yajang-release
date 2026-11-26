@@ -2,11 +2,11 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<meta name="myj-ver" content="0.135.0">
+<meta name="myj-ver" content="0.135.1">
 <meta name="author" content="최문보 (C10200)">
 <!-- 모바일 야장 · 모바일야장 PC도우미 — 제작: 최문보 (한국국토정보공사, 사번 C10200), 2026. 이 줄은 제작자 표시입니다(화면·출력물에는 보이지 않음). -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>모바일야장 PC도우미 v0.135.0</title>
+<title>모바일야장 PC도우미 v0.135.1</title>
 <!-- 예전 이름: 지적기준점망도 및 야장 도우미 (v0.94.7 이하 PC의 [⟳ 업데이트]가 이 글자로 새 판을 알아봄 — 지우지 말 것) -->
 <style>
 :root{
@@ -456,7 +456,7 @@ table.yjbur .ok{color:var(--ok)}
 #srvBox .srow input{flex:1;min-width:0;padding:8px 10px;font-size:14px}
 #srvBox .srow button{padding:8px 16px}
 #srvEmpErr{color:var(--bad,#c62828);font-size:13px;min-height:18px;margin:8px 0 6px}
-#srvBox .stbl{max-height:52vh;overflow:auto;margin-top:12px;border-top:1px solid var(--line)}
+#srvBox .srvtbl{max-height:52vh;overflow:auto;margin-top:12px;border-top:1px solid var(--line)}
 #srvBox table{width:100%;border-collapse:collapse;font-size:13px}
 #srvBox th{position:sticky;top:0;background:#f3f5f8;color:var(--sub);font-weight:600;text-align:left;padding:8px 10px}
 #srvBox td{padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:middle}
@@ -992,7 +992,7 @@ td.nm .pn{line-height:18px}td.nm .nmsub{line-height:13px} /* 한글 점명도 �
 <body>
 <div class="app">
   <header>
-    <h1>모바일야장 PC도우미 <span style="font-weight:400;color:var(--sub);font-size:13px">v0.135.0</span></h1>
+    <h1>모바일야장 PC도우미 <span style="font-weight:400;color:var(--sub);font-size:13px">v0.135.1</span></h1>
     <div class="hmenu"><button class="primary" data-menu="mProj">📁 프로젝트 ▾</button>
       <div class="mlist" id="mProj" hidden>
         <button id="btnPlList" title="프로젝트 폴더에 저장된 프로젝트 목록">📂 내 프로젝트</button>
@@ -1560,7 +1560,7 @@ td.nm .pn{line-height:18px}td.nm .nmsub{line-height:13px} /* 한글 점명도 �
     <div id="srvListBox" hidden>
       <h3>☁ 서버에서 가져오기</h3>
       <div class="srow"><input id="srvQ" placeholder="지구명 · 고유 번호" autocomplete="off"><button id="srvFind">찾기</button></div>
-      <div class="stbl"><table><thead><tr><th>지구명</th><th>고유 번호</th><th>들어 있는 것</th><th>올린 때</th></tr></thead><tbody id="srvList"></tbody></table></div>
+      <div class="srvtbl"><table><thead><tr><th>지구명</th><th>고유 번호</th><th>들어 있는 것</th><th>올린 때</th></tr></thead><tbody id="srvList"></tbody></table></div>
       <div class="sfoot"><label id="srvPin" hidden>🔒 비밀번호 <input id="srvPinIn" type="password" autocomplete="off"></label><span class="grow"></span><button id="srvClose2">닫기</button><button class="primary" id="srvGo" disabled>받아서 열기</button></div>
     </div>
   </div>
